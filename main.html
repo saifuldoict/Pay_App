@@ -37,23 +37,23 @@
             <img src="./assets/wallet1.png" class="mx-auto"/>
             <h2>Add Money</h2>
         </div>
-        <div class="border-2 border-gray-200 text-center p-3 rounded-xl hover:border-sky-400 hover:bg-[#F2F8FE]">
+        <div id="cashoutBox" class="border-2 border-gray-200 text-center p-3 rounded-xl hover:border-sky-400 hover:bg-[#F2F8FE]">
             <img src="./assets/send1.png" class="mx-auto"/>
             <h2>Cash Out</h2>
         </div>
-        <div class="border-2 border-gray-200 text-center p-3 rounded-xl hover:border-sky-400 hover:bg-[#F2F8FE]">
+        <div id="transferMoneyBox" class="border-2 border-gray-200 text-center p-3 rounded-xl hover:border-sky-400 hover:bg-[#F2F8FE]">
             <img src="./assets/money1.png" class="mx-auto"/>
             <h2>Transfer Money</h2>
         </div>
-        <div class="border-2 border-gray-200 text-center p-3 rounded-xl hover:border-sky-400 hover:bg-[#F2F8FE]">
+        <div id="Bonus Box"  class="border-2 border-gray-200 text-center p-3 rounded-xl hover:border-sky-400 hover:bg-[#F2F8FE]">
             <img src="./assets/bonus1.png" class="mx-auto"/>
             <h2>Get Bonus</h2>
         </div>
-        <div class="border-2 border-gray-200 text-center p-3 rounded-xl hover:border-sky-400 hover:bg-[#F2F8FE]">
+        <div id="payBillBox" class="border-2 border-gray-200 text-center p-3 rounded-xl hover:border-sky-400 hover:bg-[#F2F8FE]">
             <img src="./assets/purse1.png" class="mx-auto"/>
             <h2>Pay Bill</h2>
         </div>
-        <div class="border-2 border-gray-200 text-center p-3 rounded-xl hover:border-sky-400 hover:bg-[#F2F8FE]">
+        <div id="transactionBox" class="border-2 border-gray-200 text-center p-3 rounded-xl hover:border-sky-400 hover:bg-[#F2F8FE]">
             <img src="./assets/transaction1.png" class="mx-auto"/>
             <h2>Transactions</h2>
         </div>
@@ -61,7 +61,7 @@
     </div>
 
     <!--add money-->
-    <div id="addMoneyForm" class=" max-w-lg mx-auto  rounded-b-xl w-full ">
+    <div id="addMoneyForm" class=" max-w-lg mx-auto  rounded-b-xl w-full">
         <div class="h-[100vh]">
             <h1 class="text-center">Add Money</h1>
         <form action="" class="bg-white  rounded-2xl  p-6 flex flex-col justify-center items-center">
@@ -94,8 +94,123 @@
     </form>
         </div>
     </div>
-    
-
+    <!--add money close-->
+    <!--Cash Out-->
+    <div id="cashOutForm" class=" max-w-lg mx-auto  rounded-b-xl w-full hidden">
+        <div class="h-[100vh]">
+            <h1 class="text-center">Cash Out</h1>
+        <form action="" class="bg-white  rounded-2xl  p-6 flex flex-col justify-center items-center">
+        
+        <div class="mb-3 w-full">
+            <lable for="agentNo" class="text-sm font-bold">Agent Number</lable><br/>
+            <input type="text" id="agentNo" placeholder="Enter 11 digit number" class="input bg-[#f4f5f7] rounded-3xl border-none mt-2 w-full" />
+        </div>
+         <div class="mb-3 w-full">
+            <lable for="Amount" class="text-sm font-bold">Amount</lable><br/>
+            <input type="text" id="Amount" placeholder="Add Amount to withdraw" class="input bg-[#f4f5f7] rounded-3xl border-none mt-2 w-full" />
+        </div>
+        <div class="mb-3 w-full">
+            <lable for="pin" class="text-sm font-bold">Pin Number</lable><br/>
+            <input type="text" id="pin" placeholder="Enter 4 digit pin number" class="input bg-[#f4f5f7] rounded-3xl border-none mt-2 w-full" />
+        </div>
+        <button  id="withdrawMoneyButton" class="btn bg-[#0874F2] w-full rounded-2xl text-white m-3">Withdraw Money</button>
+    </form>
+        </div>
+    </div>
+    <!--Cash Out close-->
+      <!--Transfer Money-->
+    <div id="transferMoneyForm" class=" max-w-lg mx-auto  rounded-b-xl w-full hidden">
+        <div class="h-[100vh]">
+            <h1 class="text-center">Transfer Money</h1>
+        <form action="" class="bg-white  rounded-2xl  p-6 flex flex-col justify-center items-center">
+        
+        <div class="mb-3 w-full">
+            <lable for="UserAccountNo" class="text-sm font-bold">User Account Number</lable><br/>
+            <input type="text" id="UserAccountNo" placeholder="Enter 11 digit number" class="input bg-[#f4f5f7] rounded-3xl border-none mt-2 w-full" />
+        </div>
+         <div class="mb-3 w-full">
+            <lable for="TransferAmount" class="text-sm font-bold">Amount</lable><br/>
+            <input type="text" id="TransferAmount" placeholder="Add Amount to withdraw" class="input bg-[#f4f5f7] rounded-3xl border-none mt-2 w-full" />
+        </div>
+        <div class="mb-3 w-full">
+            <lable for="TransferPin" class="text-sm font-bold">Pin Number</lable><br/>
+            <input type="text" id="TransferPin" placeholder="Enter 4 digit pin number" class="input bg-[#f4f5f7] rounded-3xl border-none mt-2 w-full" />
+        </div>
+        <button  id="transferMoneyButton" class="btn bg-[#0874F2] w-full rounded-2xl text-white m-3">Send Now</button>
+    </form>
+        </div>
+    </div>
+    <!--Transfer Money close-->
+   <!--Get Bonus section-->
+    <div id="bonusForm" class=" max-w-lg mx-auto  rounded-b-xl w-full hidden">
+        <div class="h-[100vh]">
+            <h1 class="text-center">Get Bonus</h1>
+        <form action="" class="bg-white  rounded-2xl  p-6 flex flex-col justify-center items-center">
+        
+        <div class="mb-3 w-full">
+            <lable for="BonusCupon" class="text-sm font-bold">Enter Bonus Cupon</lable><br/>
+            <input type="text" id="BonusCupon" placeholder="Enter your cupon" class="input bg-[#f4f5f7] rounded-3xl border-none mt-2 w-full" />
+        </div>
+         
+        <button  id="BunusButton" class="btn bg-[#0874F2] w-full rounded-2xl text-white m-3">Get Bonus</button>
+    </form>
+        </div>
+    </div>
+    <!--Get Bonus Section close-->
+        <!--pay bill-->
+    <div id="payBillForm" class=" max-w-lg mx-auto  rounded-b-xl w-full hidden">
+        <div class="h-[100vh]">
+            <h1 class="text-center">Pay Bill</h1>
+        <form action="" class="bg-white  rounded-2xl  p-6 flex flex-col justify-center items-center">
+        <div class="mb-3 w-full">
+            <h1>Select a Bank</h1>
+           <fieldset class="fieldset ">
+          
+            <select id="selectPayBank" class=" bg-[#f4f5f7] rounded-3xl border-none mt-2 w-full">
+                <option disabled selected>Pick a bank</option>
+                <option>AB Bank</option>
+                <option>IFIC bank</option>
+                <option>Dutch Bangla</option>
+            </select>
+            
+            </fieldset>
+        </div>
+        <div class="mb-3 w-full">
+            <lable for="PayBankAccountNo" class="text-sm font-bold">Bank Account Number</lable><br/>
+            <input type="text" id="bankAccountNo" placeholder="Enter 11 digit account number" class="input bg-[#f4f5f7] rounded-3xl border-none mt-2 w-full" />
+        </div>
+         <div class="mb-3 w-full">
+            <lable for="billerAccount" class="text-sm font-bold">Biller Account Number</lable><br/>
+            <input type="text" id="billerAccount" placeholder="Enter Account No" class="input bg-[#f4f5f7] rounded-3xl border-none mt-2 w-full" />
+        </div>
+        <div class="mb-3 w-full">
+            <lable for="billerpinNumber" class="text-sm font-bold">Pin Number</lable><br/>
+            <input type="text" id="billerpinNumber" placeholder="Enter 4 digit pin number" class="input bg-[#f4f5f7] rounded-3xl border-none mt-2 w-full" />
+        </div>
+        <button  id="PayNowButton" class="btn bg-[#0874F2] w-full rounded-2xl text-white m-3">Pay Now</button>
+    </form>
+        </div>
+    </div>
+    <!--pay bill close-->
+    <!--Transaction section-->
+    <div id="transactionForm" class=" max-w-lg mx-auto  rounded-b-xl w-full hidden">
+        <div class="h-[100vh]">
+            <div class="flex justify-between items-center p-4">
+                <h1 class="text-center">Transaction History</h1>
+            <p class="text-gray-400">View All</p>
+            </div>
+        <form action="" class="bg-white  rounded-2xl  p-6 flex flex-col justify-center items-center">
+        
+        <div class="mb-3 w-full">
+            <lable for="BonusCupon" class="text-sm font-bold">Enter Bonus Cupon</lable><br/>
+            <input type="text" id="BonusCupon" placeholder="Enter your cupon" class="input bg-[#f4f5f7] rounded-3xl border-none mt-2 w-full" />
+        </div>
+         
+        
+    </form>
+        </div>
+    </div>
+    <!--Transaction Section close-->
     <script src="./main.js"></script>
 </body>
 </html>
