@@ -79,6 +79,7 @@ document.getElementById('AddMoneyButton').addEventListener("click", function(e){
    const totalBalance = availableBalance+addAmount;
 
     document.getElementById("availableBalance").innerHTML=totalBalance;
+    alert("Money added successfull")
        
 })
 
@@ -100,6 +101,7 @@ document.getElementById('withdrawMoneyButton').addEventListener("click", functio
    const totalBalance = availableBalance-ExpenseAmount;
 
     document.getElementById("availableBalance").innerHTML=totalBalance;
+    alert("Money Withdrow successfull")
        
 })
 
