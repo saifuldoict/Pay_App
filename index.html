@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Payoo mobile app</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    
+</head>
+<body class="bg-[#f4f5f7] h-[100vh] flex flex-col justify-center items-center">
+    <div class="h-[130px] w-[350px] bg-[url('./assets/bg.png')] bg-cover flex flex-col justify-center items-center">
+       
+        <img src="../../assets/Group.png" class="w-[80px] "/>
+    </div>
+    <form action="" class="bg-white w-[400px] h-[250px] rounded-2xl  p-6 flex flex-col justify-center items-center">
+        <div class="mb-3 w-full">
+            <lable for="number" class="text-sm font-bold">Mobile Number</lable><br/>
+            <input type="text" id="number" placeholder="Enter your number" class="input bg-[#f4f5f7] rounded-3xl border-none mt-2 w-full" />
+        </div>
+        <div class="mb-3 w-full">
+            <lable for="pin" class="text-sm font-bold">4 Digit Pin</lable><br/>
+            <input type="text" id="pin" placeholder="Enter 4 digit Pin" class="input bg-[#f4f5f7] rounded-3xl border-none mt-2 w-full" />
+        </div>
+        <button  id="loginButton" class="btn bg-[#0874F2] w-full rounded-2xl text-white m-3">Login</button>
+    </form>
+
+
+    <script src="./script.js"></script>
+</body>
+</html>
